@@ -12,3 +12,12 @@ function accessInfo(){
         .catch((error) =>
             console.error("Unable to fetch data:", error));
     }
+
+// function revealBox(){
+//     const studentInfo = document.getElementById("studentAdd");
+//     studentInfo.addEventListener('click', function(event) {
+    
+    
+//     }
+//     )
+// }

@@ -14,7 +14,7 @@
     <div id="studentList"></div>
 
     <button id="studentAdd">Add Student</button>
-
+    <form id="dataForm">
     <div>
       <input type="text" id="nameIn" placeholder="Enter name..." />
       <br /><input
@@ -23,7 +23,9 @@
         placeholder="Enter grade..."
       /><br />
       <input type="text" id="genderIn" placeholder="Enter sex..." />
-      <button id="saveStudent">enter</button>
-    </div>
+      <button type="button" onclick="addStudent()" id="saveStudent">enter</button>
+    </div>  
+  </form>
+  <div id="jsonOutput"></div>
   </body>
 </html>

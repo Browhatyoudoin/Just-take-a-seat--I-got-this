@@ -15,8 +15,9 @@ function accessInfo(){
 
 function addStudent(){
     let form = document.getElementById("dataForm");
+    console.log(form);
     let formData = {};
-    for (let i = 0; i < form.elements.length; i++) {
+    for (let i = 0; i < form.elements.length-1; i++) {
         let element = form.elements[i];
         if (element.type !== "submit") {
             formData[element.name] = element.value;

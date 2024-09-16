@@ -1,3 +1,4 @@
+
 function accessInfo(){
     fetch('./students.json')
         .then((res) => {
@@ -11,9 +12,25 @@ function accessInfo(){
             console.log(data))
         .catch((error) =>
             console.error("Unable to fetch data:", error));
-    }
+
+}
+
+/*
+function updateStudent(data){
+
+    fs.writeFile('./students.json',data,err => {
+        if(err){
+            console.error(err);
+            }else{
+            console.log("Data converted successfully");
+        }
+    })
+    
+}
+*/
 
 function addStudent(){
+    
     let form = document.getElementById("dataForm");
     console.log(form);
     let formData = {};
@@ -28,10 +45,10 @@ function addStudent(){
     jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
 
     console.log(Object.keys(formData));
-    accessInfo();
+
+    console.log(accessInfo());
+
+    //updateStudent(formData);
+    
 }
 
-function accessJson(){
-    var rosterJson = JSON.parse(msChoi);
-    console.log(Object.keys(rosterJson))
-}

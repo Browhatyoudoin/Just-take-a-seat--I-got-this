@@ -1,5 +1,5 @@
 function accessInfo(){
-    fetch('/students.json')
+    fetch('./students.json')
         .then((res) => {
             if(!res.ok){
                 throw new Error
@@ -26,4 +26,12 @@ function addStudent(){
     let jsonData = JSON.stringify(formData);
     let jsonOutput = document.getElementById("jsonOutput");
     jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+
+    console.log(Object.keys(formData));
+    accessInfo();
+}
+
+function accessJson(){
+    var rosterJson = JSON.parse(msChoi);
+    console.log(Object.keys(rosterJson))
 }

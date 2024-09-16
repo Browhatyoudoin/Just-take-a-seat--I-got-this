@@ -1,10 +1,15 @@
-    {"msChoi":
-        {"1":{
-            "name":"Evan",
-            "grade":"A",
-            "sex":"m",
-            "previous":["Theo","Isaac","Daniel"]
-    }}}
-
-
-
+{
+    "period":"1",
+    "students": [
+      {
+        "name": "Evan",
+        "grade": "A",
+        "sex": "m",
+        "previous": [
+          "Theo",
+          "Isaac",
+          "Daniel"
+        ]
+      }
+    ]
+  }

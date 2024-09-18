@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+</head>
+<script src="script.js"></script>
+<script src="students.json"></script>
+
+
+<body>
+
+  <form id = "dataForm">
+  <div>
+      <input type="text" name="name" id="nameIn" placeholder="Enter name..." />
+        <br /><input
+          type="text" name="grade"
+          id="gradeIn"
+          placeholder="Enter grade..."
+          placeholder="Enter sex..."
+        /><br />
+        <input type="text" id="genderIn" name ="sex" placeholder="Enter sex..." />
+        <br><button type="button" onclick="addStudent()" id="saveStudent">enter</button></br>
+    </div>
+    </form>
+    
+    <div id="jsonOutput"></div>
+</body>
+
+
+</html>

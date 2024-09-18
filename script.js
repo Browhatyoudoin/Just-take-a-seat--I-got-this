@@ -1,4 +1,3 @@
-
 function accessInfo(){
     fetch('./students.json')
         .then((res) => {
@@ -51,4 +50,3 @@ function addStudent(){
     //updateStudent(formData);
     
 }
-

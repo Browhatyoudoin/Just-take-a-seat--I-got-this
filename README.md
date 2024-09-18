@@ -1,2 +1,3 @@
 # Just take a seat, I got this
- Seating Chart Arranger
+
+Seating Chart Arranger

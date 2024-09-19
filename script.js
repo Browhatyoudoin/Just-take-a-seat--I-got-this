@@ -14,19 +14,7 @@ function accessInfo(){
 
 }
 
-/*
-function updateStudent(data){
 
-    fs.writeFile('./students.json',data,err => {
-        if(err){
-            console.error(err);
-            }else{
-            console.log("Data converted successfully");
-        }
-    })
-    
-}
-*/
 
 function addStudent(){
     
@@ -47,6 +35,6 @@ function addStudent(){
 
     console.log(accessInfo());
 
-    //updateStudent(formData);
+   
     
 }

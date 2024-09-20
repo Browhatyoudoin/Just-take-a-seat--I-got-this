@@ -1,4 +1,6 @@
 const fs = require('fs');
+const HTTP = require('http');
+
 
 fs.readFile('./students.json','utf-8',(err,jsonString) => {
     if(err){
@@ -32,23 +34,3 @@ fs.readFile('./students.json','utf-8',(err,jsonString) => {
     
 })
 
-/*
-fs.appendFile('./students.json','{"losing":"My Mind"}',function(err) {
-    if(err) throw err; 
-    console.log('added!')
-});
-
-to parse the string json file 
-
-if(err){
-        console.log(err);
-    }else{
-        try{
-            const data = JSON.parse(jsonString);
-            console.log('success');
-        }catch(err){
-            console.log('error parsing JSON', err);
-        }
-    }
-
-*/

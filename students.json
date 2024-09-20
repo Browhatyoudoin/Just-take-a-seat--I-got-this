@@ -1,1 +1,11 @@
-{"Teacher":"Mrs.Choi","students":[{"name":"Evan","grade":"A","sex":"m","previous":["Theo","Isaac","Daniel"]},{"please":"work","jaebal":"yo"}]}
+{
+  "Teacher": "Mrs.Choi",
+  "students": [
+    {
+      "name": "Evan",
+      "grade": "A",
+      "sex": "m",
+      "previous": ["Theo", "Isaac", "Daniel"]
+    }
+  ]
+}

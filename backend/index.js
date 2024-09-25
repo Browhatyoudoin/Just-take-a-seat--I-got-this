@@ -1,35 +1,15 @@
-const fs = require('fs');
+import express from 'express';
 
 
-fs.readFile('./students.json','utf-8',(err,jsonString) => {
-    if(err){
-        console.log(err);
-    }else{
-        if(err){
-            console.log(err);
-        }else{
-            try{
-                let data = JSON.parse(jsonString);
-                console.log('success');
-                data.students[data.students.length]={"please":"work", "jaebal":"yo"};
-                console.log(data);
-                let newData = JSON.stringify(data);
-                fs.writeFile('./students.json',newData, err =>{
-                    if(err){
-                        console.log(err);
-                    }else{
-                        console.log("file updated")
-                    }
-                })
-               
-            }catch(err){
-                console.log('error parsing JSON', err); 
-                
-            }
-            
-        }
-    }
-   
-    
-})
+const app = express();
+const PORT = 3000;
 
+
+app.get("/", (req, res) => {
+  res.send("Hello from Express!");
+  addStudent();
+});
+
+app.listen(PORT, () => {
+  console.log(`Express server running at http://localhost:${PORT}/`);
+});

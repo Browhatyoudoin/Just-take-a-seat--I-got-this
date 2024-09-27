@@ -1,5 +1,6 @@
+
 function accessInfo(){
-    fetch('/students.json')
+    fetch('./students.json')
         .then((res) => {
             if(!res.ok){
                 throw new Error
@@ -11,13 +12,42 @@ function accessInfo(){
             console.log(data))
         .catch((error) =>
             console.error("Unable to fetch data:", error));
-    }
 
-// function revealBox(){
-//     const studentInfo = document.getElementById("studentAdd");
-//     studentInfo.addEventListener('click', function(event) {
+}
+
+/*
+function updateStudent(data){
+
+    fs.writeFile('./students.json',data,err => {
+        if(err){
+            console.error(err);
+            }else{
+            console.log("Data converted successfully");
+        }
+    })
     
+}
+*/
+
+function addStudent(){
     
-//     }
-//     )
-// }
+    let form = document.getElementById("dataForm");
+    console.log(form);
+    let formData = {};
+    for (let i = 0; i < form.elements.length-1; i++) {
+        let element = form.elements[i];
+        if (element.type !== "submit") {
+            formData[element.name] = element.value;
+        }
+    }
+    let jsonData = JSON.stringify(formData);
+    let jsonOutput = document.getElementById("jsonOutput");
+    jsonOutput.innerHTML = "<pre>" + jsonData + "</pre>";
+
+    console.log(Object.keys(formData));
+
+    console.log(accessInfo());
+
+    //updateStudent(formData);
+    
+}

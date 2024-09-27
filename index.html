@@ -9,21 +9,18 @@
   <button onclick="accessInfo()">click</button>
 
   <body>
-    <h1>Seating Arranger</h1>
+    <h1 id="heading">Seating Arranger</h1>
     <p>Settings</p>
     <div id="studentList"></div>
-
-    <button id="studentAdd">Add Student</button>
-
-    <div>
-      <input type="text" id="nameIn" placeholder="Enter name..." />
-      <br /><input
-        type="text"
-        id="gradeIn"
-        placeholder="Enter grade..."
-      /><br />
-      <input type="text" id="genderIn" placeholder="Enter sex..." />
-      <button id="saveStudent">enter</button>
-    </div>
+    <a href="addstudent.html">
+      <button id="studentAdd">Add Student</button>
+    </a>
+    <script>
+      let button1 = document.getElementById("studentAdd");
+      button1.innerHTML = "Add Student";
+      button1.addEventListener("click", function () {
+        console.log("asdfasdfasdf");
+      });
+    </script>
   </body>
 </html>

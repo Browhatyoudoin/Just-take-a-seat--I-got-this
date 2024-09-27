@@ -1,5 +1,5 @@
-import { sequelize } from "./config.js";
-import { Teachers } from "./models/teachers.js";
+import { sequelize } from "../config.js";
+import { Teachers } from "./teachers.js";
 import { Periods } from "./periods.js";
 import DataTypes from 'sequelize';
 

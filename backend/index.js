@@ -1,5 +1,5 @@
 import express from 'express';
-import { createTeacher } from "./sauce.js";
+import { createTeacher, createPeriod, assignTeacher, getTeacher} from "./sauce.js";
 
 const app = express();
 const PORT = 3000;
@@ -16,4 +16,12 @@ app.listen(PORT, () => {
   console.log(`Express server running at http://localhost:${PORT}/`);
 });
 
-createTeacher("Ms. Choi", "password");
+app.get('/getTeacher/:teacherName', async (req, res) =>{
+  const { teacherName } = req.params;
+  res.json(await getTeacher(teacherName))
+})
+
+
+// createTeacher("MsChoi", "password");
+// createPeriod(1, "ApLang");
+// assignTeacher("MsChoi", 1);

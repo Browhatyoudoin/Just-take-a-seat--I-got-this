@@ -1,5 +1,5 @@
 import express from 'express';
-import { createTeacher, createPeriod, assignTeacher, getTeacher} from "./sauce.js";
+import { createTeacher, createPeriod, createStudent, assignTeacher, assignPeriod, getTeacher, getPeriod, getStudents } from "./sauce.js";
 
 const app = express();
 const PORT = 3000;

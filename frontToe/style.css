@@ -1,5 +1,4 @@
 #heading {
-    margin-top:50px;
     text-align:center;
     color:#eaaa15;
     font-size:75px;
@@ -12,6 +11,7 @@ body {
 #logo{
     display:inline-block;
     align:left;
-    width:400px;
-    height:400px;
+    width:250px;
+    height:250px;
+    position:absolute;
 }

@@ -1,0 +1,17 @@
+#heading {
+    margin-top:50px;
+    text-align:center;
+    color:#eaaa15;
+    font-size:75px;
+    font-family:Papyrus,Garamond,"Fantasy";
+    margin:-20px;
+}
+body {
+    background-color:black;
+}
+#logo{
+    display:inline-block;
+    align:left;
+    width:400px;
+    height:400px;
+}

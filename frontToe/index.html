@@ -4,19 +4,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seating Arranger</title>
+    <link rel="stylesheet" href="style.css" />
+    <img src="logo-removebg-preview.png" id="logo" />
   </head>
   <script src="script.js"></script>
   <script src="students.json"></script>
-  <button onclick="accessInfo()">click</button>
 
   <body>
-    <h1>Seating Arranger</h1>
+    <h1 id="heading">Just Take a Seat...</h1>
+    <h2 id="heading">I Got This</h2>
     <p>Settings</p>
     <div id="studentList"></div>
 
     <a href="addStudent.html">
       <button id="studentAdd">Add Student</button>
     </a>
+    <!--<button onclick="accessInfo()">click</button>-->
 
     <script>
       let button1 = document.getElementById("studentAdd");

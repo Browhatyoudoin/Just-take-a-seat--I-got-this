@@ -1,3 +1,4 @@
+
 function accessInfo(){
     fetch('./students.json')
         .then((res) => {

@@ -7,7 +7,7 @@ const Students = sequelize.define(
     'Students',
     {
         StudentID: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true
         },
@@ -23,5 +23,8 @@ const Students = sequelize.define(
     }
 
 );
+
+
+
 
 export { Students }

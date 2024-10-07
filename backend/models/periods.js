@@ -7,7 +7,7 @@ const Periods = sequelize.define(
     'Periods',
     {
         number: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true
         },
@@ -19,6 +19,7 @@ const Periods = sequelize.define(
     }
 
 );
+
 
 Periods.hasMany(Students);
 Students.belongsTo(Periods);

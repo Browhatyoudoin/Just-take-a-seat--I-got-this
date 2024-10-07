@@ -20,10 +20,11 @@ export async function assignTeacher(username, period){
     await teach.addPeriods(per);
 }
 
-export async function assignPeriod(number, StudentID){
+export async function assignPeriod(period, StudentID){
     const stu = await Students.findByPk(StudentID);
-    const per = await Students.findByPk(number);
-    await per.addPeriods(stu);
+    const per = await Periods.findByPk(period);
+    //console.log(per);
+    await per.addStudents(stu);
 }
 
 export async function getTeacher(username){
@@ -34,6 +35,7 @@ export async function getPeriod(id){
     return await Periods.findByPk(id);
 }
 
-export async function getStudents(StudentID){
+export async function getStudent(StudentID){
     return await Students.findByPk(StudentID);
 }
+

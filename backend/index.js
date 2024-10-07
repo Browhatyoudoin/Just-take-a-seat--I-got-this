@@ -1,8 +1,8 @@
 import express from 'express';
-import { createTeacher, createPeriod, createStudent, assignTeacher, assignPeriod, getTeacher, getPeriod, getStudents } from "./sauce.js";
+import { createTeacher, createPeriod, createStudent, assignTeacher, assignPeriod, getTeacher, getPeriod, getStudent } from "./sauce.js";
 
 const app = express();
-const PORT = 3000;
+const PORT = 3001;
 
 
 app.use(express.json());
@@ -22,6 +22,9 @@ app.get('/getTeacher/:teacherName', async (req, res) =>{
 })
 
 
-// createTeacher("MsChoi", "password");
-// createPeriod(1, "ApLang");
-// assignTeacher("MsChoi", 1);
+
+//createTeacher("MsChoi", "password");
+//createPeriod("choi1","ApLang");
+//assignTeacher("MsChoi", "Lang1");
+//createStudent(420693,"Isaac Shin", "A");
+assignPeriod("Lang1",420693);

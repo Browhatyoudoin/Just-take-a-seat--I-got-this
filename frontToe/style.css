@@ -1,7 +1,6 @@
 #heading {
-    margin-top:50px;
     text-align:center;
-    color:#eaaa15;
+    color:#de6b21;
     font-size:75px;
     font-family:Papyrus,Garamond,"Fantasy";
     margin:-20px;
@@ -12,6 +11,7 @@ body {
 #logo{
     display:inline-block;
     align:left;
-    width:400px;
-    height:400px;
+    width:250px;
+    height:250px;
+    position:absolute;
 }

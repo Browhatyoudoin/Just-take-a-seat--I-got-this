@@ -8,7 +8,6 @@
     <img src="logo-removebg-preview.png" id="logo" />
   </head>
   <script src="script.js"></script>
-  
 
   <body>
     <h1 id="heading">Just Take a Seat...</h1>
@@ -19,6 +18,8 @@
     <a href="addStudent.html">
       <button id="studentAdd">Add Student</button>
     </a>
+
+    <button id="deskAdd">Add Desk</button>
     <!--<button onclick="accessInfo()">click</button>-->
 
     <script>
@@ -27,6 +28,10 @@
       button1.addEventListener("click", function () {
         console.log("asdfasdfasdf");
       });
+
+      let button2 = document.getElementById("deskAdd");
+      button2.innerHTML = "Add Desk";
+      button2.addEventListener("click", function () {});
     </script>
   </body>
 </html>

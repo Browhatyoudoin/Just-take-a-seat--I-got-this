@@ -1,18 +1,18 @@
 
 function accessInfo(){
-    fetch('./students.json')
-        .then((res) => {
-            if(!res.ok){
-                throw new Error
-                    (`HTTP error! Status: ${res.status}`);
-            }
-            return res.json();
-        })
-        .then((data) =>
-            console.log(data))
-        .catch((error) =>
-            console.error("Unable to fetch data:", error));
-
+    fetch('http://localhost:3000/')
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
 }
 
 

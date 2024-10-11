@@ -13,7 +13,7 @@
     <h1 id="heading">Just Take a Seat...</h1>
     <h2 id="heading">I Got This</h2>
     <p>Settings</p>
-    <div id="studentList"></div>
+    <!--<div id="studentList"></div>-->
 
     <a href="addStudent.html">
       <button id="studentAdd">Add Student</button>
@@ -23,17 +23,21 @@
 
     <button id="deskAdd">Add Desk</button>
     <!--<button onclick="accessInfo()">click</button>-->
+    <div id="classroom"></div>
 
     <script>
-      let button1 = document.getElementById("studentAdd");
-      button1.innerHTML = "Add Student";
-      button1.addEventListener("click", function () {
-        console.log("asdfasdfasdf");
-      });
-
+      //let button1 = document.getElementById("studentAdd");
+      //button1.innerHTML = "Add Student";
+      //button1.addEventListener("click", function () {
+      //  console.log("asdfasdfasdf");
+      //});
       let button2 = document.getElementById("deskAdd");
-      button2.innerHTML = "Add Desk";
-      button2.addEventListener("click", function () {});
+      let desk = document.createElement("div");
+      button2.addEventListener("click", function () {
+        desk.innerHTML = "hi";
+        desk.id = "desk";
+        document.getElementById("classroom").appendChild(desk);
+      });
     </script>
   </body>
 </html>

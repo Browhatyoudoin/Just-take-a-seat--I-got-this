@@ -23,7 +23,6 @@ export async function assignTeacher(username, period){
 export async function assignPeriod(period, StudentID){
     const stu = await Students.findByPk(StudentID);
     const per = await Periods.findByPk(period);
-    //console.log(per);
     await per.addStudents(stu);
 }
 

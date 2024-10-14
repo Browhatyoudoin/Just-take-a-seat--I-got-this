@@ -7,18 +7,6 @@ const PORT = 3000;
 
 app.use(express.json());
 
-app.get("/", (req, res) => {
-  const dbFilePath = "./database.sqlite"; 
-
-  res.json(dbFilePath, (err) => {
-      if (err) {
-          console.error("SAD", err);
-          res.status(500).send("PLS HeLP");
-      }
-  });
-  
-});
-
 app.listen(PORT, () => {
   console.log(`Express server running at http://localhost:${PORT}/`);
 });
@@ -26,6 +14,10 @@ app.listen(PORT, () => {
 app.get('/getTeacher/:teacherName', async (req, res) =>{
   const { teacherName } = req.params;
   res.json(await getTeacher(teacherName))
+})
+
+app.post('createTeacher/teacherName', async (req, res) => {
+  console.log(req.body);
 })
 
 

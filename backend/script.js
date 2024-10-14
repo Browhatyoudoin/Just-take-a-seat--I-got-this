@@ -1,6 +1,6 @@
 
-function accessInfo(){
-    fetch('http://localhost:3000/')
+function accessTeacherInfo(){
+    fetch('http://localhost:3000/getTeacher/:${name}/')
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -15,7 +15,22 @@ function accessInfo(){
   });
 }
 
+function createTeacher(){
+    const username = 
+    const password = 
 
+    fetch('http://localhost:3000/createTeacher/:${name}/',{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({username : username, password: password})
+    })
+    .then(response => response.json())
+    .catch(error => {
+        console.error('Error:',error);
+    })
+}
 
 function addStudent(){
     

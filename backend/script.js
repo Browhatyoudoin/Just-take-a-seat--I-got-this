@@ -37,7 +37,7 @@ function accessPeriodInfo(periodName){
   });
 }
 
-function accessPeriodInfo(studentId){
+function accessStudentInfo(studentId){
 
     const url = 'http://localhost:3000/getStudent/' + studentId;
 
@@ -56,12 +56,15 @@ function accessPeriodInfo(studentId){
   });
 }
 
-/*
-function createTeacher(){
-    const username = 
-    const password = 
 
-    fetch('http://localhost:3000/createTeacher/:${name}/',{
+function createTeacher(teacherEmail, passcode){
+
+    const username = teacherEmail; 
+    const password = passcode; 
+
+    const url = 'http://localhost:3000/createTeacher/' + teacherEmail; 
+
+    fetch(url,{
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -73,7 +76,31 @@ function createTeacher(){
         console.error('Error:',error);
     })
 }
-*/
+
+
+
+
+function createStudent(){
+
+    const id = document.getElementById(id); 
+    const name = document.getElementById(name); 
+    const grade = document.getElementById(grade);
+
+    const url = 'http://localhost:3000/createStudent/' + id; 
+
+    fetch(url,{
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({id: id, name: name, grade: grade })
+    })
+    .then(response => response.json())
+    .catch(error => {
+        console.error('Error:',error);
+    })
+}
+
 /*
 function createStudent(){
 

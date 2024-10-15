@@ -41,6 +41,13 @@ app.get('/getStudent/:studentId', async (req, res) =>{
 
 app.post('createTeacher/:teacherName', async (req, res) => {
   console.log(req.body);
+  createTeacher(req.body.username, req.body.password);
 })
 
+app.post('')
+
+app.post('/createStudent/:studentId', async (req, res) => {
+  console.log(req.body);
+  createStudent(req.body.id, req.body.name, req.body.grade); 
+})
 

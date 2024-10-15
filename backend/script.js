@@ -55,35 +55,49 @@ function addStudent(){
     
 }
 
-dragElement(document.getElementById("desk"));
+const parent = document.getElementById('grid-parent');
 
-function dragElement(elmnt) {
-    var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+for (let i = 1; i<=49; i++) {
+    let newButton = document.createElement('button');
+    newButton.textContent = NAME FROM JSON;
+    newButton.classList.add('hidden'); //WE NEED TO ADD IF STATEMENT HERE AND ADD CLASS BASED ON GRADE
+    parent.appendChild(newButton);
 
-    elmnt.addEventListener("mousedown", dragMouseDown);
-
-    function dragMouseDown(e) {
-        e.preventDefault();
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        document.addEventListener("mouseup", closeDragElement);
-        document.addEventListener("mousemove", elementDrag);
+    newButton.addEventListener('click', function(event) {
+        
     }
-
-    function elementDrag(e) {
-        e.preventDefault();
-        pos1 = pos3 - e.clientX;
-        pos2 = pos4 - e.clientY;
-        pos3 = e.clientX;
-        pos4 = e.clientY;
-        // set the element's new position:
-        elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
-        elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
-    }
-
-    function closeDragElement() {
-        // stop moving when mouse button is released:
-        document.removeEventListener("mouseup", closeDragElement);
-        document.removeEventListener("mousemove", elementDrag);
-    }
+    )
+    
 }
+// dragElement(document.getElementById("desk"));
+
+// function dragElement(elmnt) {
+//     var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+
+//     elmnt.addEventListener("mousedown", dragMouseDown);
+
+//     function dragMouseDown(e) {
+//         e.preventDefault();
+//         pos3 = e.clientX;
+//         pos4 = e.clientY;
+//         document.addEventListener("mouseup", closeDragElement);
+//         document.addEventListener("mousemove", elementDrag);
+//     }
+
+//     function elementDrag(e) {
+//         e.preventDefault();
+//         pos1 = pos3 - e.clientX;
+//         pos2 = pos4 - e.clientY;
+//         pos3 = e.clientX;
+//         pos4 = e.clientY;
+//         // set the element's new position:
+//         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+//         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+//     }
+
+//     function closeDragElement() {
+//         // stop moving when mouse button is released:
+//         document.removeEventListener("mouseup", closeDragElement);
+//         document.removeEventListener("mousemove", elementDrag);
+//     }
+// }

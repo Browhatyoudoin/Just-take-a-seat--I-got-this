@@ -16,24 +16,20 @@ body {
     position:absolute;
 }
 
-/* #classroom{
+#studentList{
     display:grid;
-    grid-template-columns: repeat(10, auto);
-    grid-template-rows: repeat(10, auto);
-    margin-left: 300px;
+    grid-template-rows: repeat(40, auto);
+    width:275px;
+    height:840px;
+    background-color: yellow;
+    position:absolute;
 }
 
-#classroom div{
-    height: 80px;
-    width: 80px;
-    border: 3px solid black;
-    font-size: 2rem;
-    display: grid;
-    place-content: center;
-    font-weight: bold;
-    background-color:black;
-    margin: auto;
-} */
+.STUDENT{
+    width:273px;
+    height:19px;
+    border: 1px solid black;
+}
 
 #grid-parent{
     display:grid;
@@ -42,11 +38,11 @@ body {
     place-content: center;
     height:800px;
     width:1000px;
-    border:3px solid white;
+    border:3px solid orange;
     margin-left: 300px;
 }
 
-#grid-parent div{
+.grid-item{
     height: 80px;
     width: 100px;
     border: 10px solid black;
@@ -59,10 +55,30 @@ body {
 }
 
 
-#desk{
+/* #desk{
     background-color: rgb(28, 169, 197) !important;
     width:97px;
     height:72px;
     border: 3px solid black;
     text-align:center;
+} */
+
+.a{
+    background-color:green;
+}
+
+.b{
+    background-color: greenyellow
+}
+
+.c{
+    background: yellow;
+}
+
+.d{
+    background-color: orange;
+}
+
+.f{
+    background-color: red;
 }

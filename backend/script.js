@@ -117,8 +117,9 @@ function elementDrag(e) {
     elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
 }
 
-function closeDragElement() {
-    // stop moving when mouse button is released:
-    document.removeEventListener("mouseup", closeDragElement);
-    document.removeEventListener("mousemove", elementDrag);
-}
+//     function closeDragElement() {
+//         // stop moving when mouse button is released:
+//         document.removeEventListener("mouseup", closeDragElement);
+//         document.removeEventListener("mousemove", elementDrag);
+//     }
+// }

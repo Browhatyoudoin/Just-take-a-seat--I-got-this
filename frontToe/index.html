@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="style.css" />
     <img src="logo-removebg-preview.png" id="logo" />
   </head>
-
+  <script src="../backend/script.js"></script>
   <body>
     <h1 id="heading">Just Take a Seat...</h1>
     <h2 id="heading">I Got This</h2>
@@ -17,8 +17,9 @@
     <a href="addStudent.html">
       <button id="studentAdd">Add Student</button>
     </a>
+    
+    <button id="tasting" onclick="accessTeacherInfo('MsChoi')">tasting</button>
     <script src="../backend/script.js"></script>
-    <button id="tasting" onclick="accessInfo()">tasting</button>
 
     <button id="deskAdd">Add Desk</button>
     <!--<button onclick="accessInfo()">click</button>-->
@@ -88,5 +89,6 @@
         document.getElementById("classroom").appendChild(desk);
       });
     </script>
+    
   </body>
 </html>

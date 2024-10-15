@@ -1,11 +1,24 @@
 import express from 'express';
 import { createTeacher, createPeriod, createStudent, assignTeacher, assignPeriod, getTeacher, getPeriod, getStudent } from "./sauce.js";
+import cors from 'cors';
+
+
 
 const app = express();
 const PORT = 3000;
 
 
 app.use(express.json());
+
+app.use(cors({
+  origin: 'http://127.0.0.1:5500'
+}));
+
+// var corsOptions = {
+//   origin: "http://localhost:5500",
+//   optionSuccessStatus: 200
+// }
+
 
 app.listen(PORT, () => {
   console.log(`Express server running at http://localhost:${PORT}/`);
@@ -16,14 +29,18 @@ app.get('/getTeacher/:teacherName', async (req, res) =>{
   res.json(await getTeacher(teacherName))
 })
 
-app.post('createTeacher/teacherName', async (req, res) => {
+app.get('/getPeriod/:periodName', async (req, res) =>{
+  const { periodName } = req.params;
+  res.json(await getPeriod(periodName));
+})
+
+app.get('/getStudent/:studentId', async (req, res) =>{
+  const { studentId } = req.params;
+  res.json(await getStudent(studentId))
+})
+
+app.post('createTeacher/:teacherName', async (req, res) => {
   console.log(req.body);
 })
 
 
-
-//createTeacher("MsChoi", "password");
-//createPeriod("choi1","ApLang");
-//assignTeacher("MsChoi", "Lang1");
-//createStudent(420693,"Isaac Shin", "A");
-//assignPeriod("Lang1",420693);

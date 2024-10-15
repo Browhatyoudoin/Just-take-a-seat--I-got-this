@@ -22,5 +22,4 @@ const Teachers = sequelize.define(
 Teachers.hasMany(Periods);
 Periods.belongsTo(Teachers);
 
-
 export { Teachers }

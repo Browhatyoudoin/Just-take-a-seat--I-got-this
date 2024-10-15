@@ -1,6 +1,9 @@
 
-function accessTeacherInfo(){
-    fetch('http://localhost:3000/getTeacher/:${name}/')
+function accessTeacherInfo(teacherName){
+
+    const url = 'http://localhost:3000/getTeacher/' + teacherName;
+    
+    fetch(url)
   .then(response => {
     if (!response.ok) {
       throw new Error('Network response was not ok');
@@ -15,6 +18,45 @@ function accessTeacherInfo(){
   });
 }
 
+function accessPeriodInfo(periodName){
+
+    const url = 'http://localhost:3000/getPeriod/' + periodName;
+
+    fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
+
+function accessPeriodInfo(studentId){
+
+    const url = 'http://localhost:3000/getStudent/' + studentId;
+
+    fetch(url)
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.json();
+  })
+  .then(data => {
+    console.log(data);
+  })
+  .catch(error => {
+    console.error('Error:', error);
+  });
+}
+
+/*
 function createTeacher(){
     const username = 
     const password = 

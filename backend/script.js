@@ -82,10 +82,14 @@ function createTeacher(teacherEmail, passcode){
 
 function createStudent(){
 
-    const id = document.getElementById(id); 
-    const name = document.getElementById(name); 
-    const grade = document.getElementById(grade);
+    const id = document.getElementById('id').value;
+    const name = document.getElementById('nameIn').value; 
+    const grade = document.getElementById('gradeIn').value;
 
+    console.log(id);
+    console.log(name);
+    console.log(grade);
+    
     const url = 'http://localhost:3000/createStudent/' + id; 
 
     fetch(url,{

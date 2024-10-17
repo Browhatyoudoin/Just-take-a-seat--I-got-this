@@ -5,10 +5,18 @@
     <link rel="stylesheet" href="student.css" />
     <img src="logo-removebg-preview.png" id="logo" />
   </head>
-  <script src="../backend/script.js"></script>
+  
 
 
   <body>
+    <script src="../backend/script.js"></script>
+    <script>
+      function printStudent(){
+        console.log(document.getElementById('id').value);
+        console.log(document.getElementById('nameIn').value);
+        console.log(document.getElementById('gradeIn').value);
+      }
+    </script>
     <h1>Add Student</h1>
     <form id="dataForm">
       <div id="info">
@@ -26,15 +34,14 @@
         /><br />
         <input
           type="number"
-          id="ID"
+          id="id"
           name="ID"
           placeholder="Enter ID..."
         />
-        <br /><a href="index.html"
+        <br /><a href="index.html">
           ><button type="button" onclick="createStudent()" id="saveStudent">
             Add
-          </button></a
-        >
+          </button></a>
       </div>
     </form>
 

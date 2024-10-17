@@ -11,6 +11,7 @@ export async function createPeriod(number, classType){
 }
 
 export async function createStudent(StudentID, Name, Grade){
+    console.log("yessir");
     return await Students.create({StudentID: StudentID, Name: Name, Grade: Grade});
 }
 

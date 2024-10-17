@@ -44,10 +44,14 @@ app.post('createTeacher/:teacherName', async (req, res) => {
   createTeacher(req.body.username, req.body.password);
 })
 
-app.post('')
+
 
 app.post('/createStudent/:studentId', async (req, res) => {
   console.log(req.body);
+  res.send("the function was called successfully");
   createStudent(req.body.id, req.body.name, req.body.grade); 
+  //yo u gotta make another page where the beginning is a sign in page
+  //depending on who signs it it give you a selection screen of what period you
+  //want which will lead you to the class that you want to see
 })
 

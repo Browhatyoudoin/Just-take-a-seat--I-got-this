@@ -5,18 +5,9 @@
     <link rel="stylesheet" href="student.css" />
     <img src="logo-removebg-preview.png" id="logo" />
   </head>
-  
-
+  <script src="../backend/script.js"></script>
 
   <body>
-    <script src="../backend/script.js"></script>
-    <script>
-      function printStudent(){
-        console.log(document.getElementById('id').value);
-        console.log(document.getElementById('nameIn').value);
-        console.log(document.getElementById('gradeIn').value);
-      }
-    </script>
     <h1>Add Student</h1>
     <form id="dataForm">
       <div id="info">
@@ -37,12 +28,7 @@
           name="grade"
           id="gradeIn"
           placeholder="Enter grade..."
-        /><br />
-        <input
-          type="number"
-          id="id"
-          name="ID"
-          placeholder="Enter ID..."
+          class="info"
         />
         <br /><input
           type="text"
@@ -53,7 +39,8 @@
         <br /><a href="index.html">
           ><button type="button" onclick="createStudent()" id="saveStudent">
             Add
-          </button></a>
+          </button></a
+        >
       </div>
     </form>
 

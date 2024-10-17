@@ -21,8 +21,11 @@ body {
     grid-template-rows: repeat(40, auto);
     width:275px;
     height:840px;
-    background-color: yellow;
+    background-color: orange;
     position:absolute;
+    color: rgb(72, 67, 224);
+    font-weight:bold;
+    font-size: 20px;
 }
 
 .STUDENT{
@@ -50,7 +53,7 @@ body {
     display: grid;
     place-content: center;
     font-weight: bold;
-    background-color:cornflowerblue;
+    background-color:rgb(35, 80, 194);
     margin: auto;
 }
 

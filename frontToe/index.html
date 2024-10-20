@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Seating Arranger</title>
+  </head>
+  <script src="script.js"></script>
+  <script src="students.json"></script>
+  <button onclick="accessInfo()">click</button>
+
+  <body>
+    <h1 id="heading">Seating Arranger</h1>
+    <p>Settings</p>
+    <div id="studentList"></div>
+
+    <a href="addStudent.html">
+      <button id="studentAdd">Add Student</button>
+    </a>
+
+    <script>
+      let button1 = document.getElementById("studentAdd");
+      button1.innerHTML = "Add Student";
+      button1.addEventListener("click", function () {
+        console.log("asdfasdfasdf");
+      });
+    </script>
+  </body>
+</html>

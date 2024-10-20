@@ -1,0 +1,56 @@
+h1{
+    color:#de6b21;
+    text-align: center;
+    font-size:75px;
+    font-family:Papyrus,Garamond,"Fantasy";
+}
+#logo{
+    display:inline-block;
+    width:250px;
+    height:250px;
+    position:absolute;
+}
+body{
+    background-color: black;
+}
+.info{
+    background-color:rgb(51, 117, 188);
+    color:black;
+    width:250px;
+    height:75px;
+    font-size:20px;
+    border-radius:15px;
+    border:4px rgb(1, 1, 82) solid;
+    font-family:Papyrus,Garamond,"Fantasy";
+}
+/* #gradeIn{
+    background-color:yellow;
+    color:black;
+    width:250px;
+    height:75px;
+}
+#genderIn{
+    background-color:yellow;
+    color:black;
+    width:250px;
+    height:75px;
+} */
+::placeholder{
+    color: black;
+    font-family:Papyrus,Garamond,"Fantasy";
+    font-size:large;
+}
+#saveStudent{
+    font-family:Papyrus,Garamond,"Fantasy";
+    width:100px;
+    height:50px;
+    border-radius:12px;
+    background-color: rgb(15, 178, 200);
+    border:4px rgb(1, 1, 82) solid;
+    cursor:pointer;
+}
+#info{
+    margin:auto;
+    width: 25%;
+    height: 25%
+}

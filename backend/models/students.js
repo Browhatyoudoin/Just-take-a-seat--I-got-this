@@ -7,21 +7,38 @@ const Students = sequelize.define(
     'Students',
     {
         StudentID: {
-            type: DataTypes.STRING,
+            type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true
         },
-        Name: {
+        First: {
             type: DataTypes.STRING,
             allowNull: false
+        },
+        Last:{
+            type: DataTypes.STRING,
+            allowNull:false
         },
         Grade: {
             type: DataTypes.STRING,
             allowNull: false, 
+        },
+        Gender:{
+            type: DataTypes.STRING,
+            allowNull: false   
+        },
+        groupNumber:{
+            type: DataTypes.INTEGER,
+            allowNull: false
         }
+
+
 
     }
 
 );
+
+
+
 
 export { Students }

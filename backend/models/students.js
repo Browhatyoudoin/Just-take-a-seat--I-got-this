@@ -29,7 +29,7 @@ const Students = sequelize.define(
         },
         groupNumber:{
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         }
 
 

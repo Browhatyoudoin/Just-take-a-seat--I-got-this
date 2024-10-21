@@ -86,12 +86,8 @@ function createStudent(){
     const first = document.getElementById('firstIn').value; 
     const last = document.getElementById('lastIn').value; 
     const grade = document.getElementById('gradeIn').value;
-    const gender = true; 
-    if((document.getElementById('gender').value.toLowerCase()) === "m"){
-        gender = true; 
-    }else{
-        gender = false;
-    }
+    const gender = document.getElementById('gender'); 
+    
     
 
     console.log(id);

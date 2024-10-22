@@ -22,14 +22,6 @@ const Students = sequelize.define(
         Grade: {
             type: DataTypes.STRING,
             allowNull: false, 
-        },
-        Gender:{
-            type: DataTypes.STRING,
-            allowNull: false   
-        },
-        groupNumber:{
-            type: DataTypes.INTEGER,
-            allowNull: true
         }
 
 

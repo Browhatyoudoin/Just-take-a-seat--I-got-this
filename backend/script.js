@@ -83,11 +83,15 @@ function createTeacher(teacherEmail, passcode){
 function createStudent(){
 
     const id = document.getElementById('id').value;
-    const name = document.getElementById('nameIn').value; 
+    const first = document.getElementById('firstIn').value; 
+    const last = document.getElementById('lastIn').value; 
     const grade = document.getElementById('gradeIn').value;
+    const gender = document.getElementById('gender'); 
+    
+    
 
     console.log(id);
-    console.log(name);
+    console.log(first);
     console.log(grade);
     
     const url = 'http://localhost:3000/createStudent/' + id; 
@@ -97,7 +101,7 @@ function createStudent(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({id: id, name: name, grade: grade })
+        body: JSON.stringify({id: id, first: first, last: last, grade: grade, gender: gender})
     })
     .then(response => response.json())
     .catch(error => {
@@ -105,11 +109,22 @@ function createStudent(){
     })
 }
 
+function shuffleArray(){
+    for (let i = seating.length - 1; i > 0; i--) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [seating[i], seating[j]] = [seating[j], seating[i]]; 
+    }
+    return seating;
+}
 /*
-function createStudent(){
+function studentsArray(){
+    const arr = [];
 
+
+    for(let i = )
 }
 */
+
 function elementDrag(e) {
     e.preventDefault();
     pos1 = pos3 - e.clientX;

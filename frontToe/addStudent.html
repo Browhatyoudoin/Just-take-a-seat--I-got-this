@@ -5,43 +5,55 @@
     <link rel="stylesheet" href="student.css" />
     <img src="logo-removebg-preview.png" id="logo" />
   </head>
-  
-
+  <script src="../backend/script.js"></script>
 
   <body>
-    <script src="../backend/script.js"></script>
-    <script>
-      function printStudent(){
-        console.log(document.getElementById('id').value);
-        console.log(document.getElementById('nameIn').value);
-        console.log(document.getElementById('gradeIn').value);
-      }
-    </script>
     <h1>Add Student</h1>
     <form id="dataForm">
       <div id="info">
         <input
           type="text"
-          name="name"
-          id="nameIn"
-          placeholder="Enter name..."
+          name="first"
+          id="firstIn"
+          placeholder="Enter First Name..."
+          class="info"
         />
+        <br /><input
+          type="text"
+          name="last"
+          id="lastIn"
+          placeholder="Enter Last Name..."
+          class="info"
+        />
+        <br /><input
+          type="text"
+          name="id"
+          id="id"
+          placeholder="Enter Student ID..."
+          class="info"/>
         <br /><input
           type="text"
           name="grade"
           id="gradeIn"
           placeholder="Enter grade..."
-        /><br />
-        <input
-          type="number"
-          id="id"
-          name="ID"
-          placeholder="Enter ID..."
+          class="info"
         />
-        <br /><a href="index.html">
-          ><button type="button" onclick="createStudent()" id="saveStudent">
+        <br /><input
+          type="text"
+          id="gender"
+          name="genderIn"
+          placeholder="Enter Gender..."
+          class="info"
+        />
+        <br />
+          <button type="button" onclick="createStudent()" id="saveStudent">
             Add
-          </button></a>
+          </button>
+        <a href="index.html">
+          <button type="button" id="saveStudent">
+            back
+          </button>
+        </a>
       </div>
     </form>
 

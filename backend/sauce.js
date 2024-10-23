@@ -10,9 +10,9 @@ export async function createPeriod(number, classType){
     return await Periods.create({number : number, classType : classType});
 }
 
-export async function createStudent(StudentID, Name, Grade){
+export async function createStudent(StudentID, First, Last, Grade){
     console.log("yessir");
-    return await Students.create({StudentID: StudentID, Name: Name, Grade: Grade});
+    return await Students.create({StudentID: StudentID, First: First, Last: Last, Grade: Grade});
 }
 
 export async function assignTeacher(username, period){

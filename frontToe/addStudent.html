@@ -9,6 +9,7 @@
 
   <body>
     <h1>Add Student</h1>
+    <center>
     <form id="dataForm">
       <div id="info">
         <input
@@ -27,26 +28,29 @@
         />
         <br /><input
           type="text"
-          name="grade"
-          id="gradeIn"
-          placeholder="Enter grade..."
-          class="info"
-        />
+          name="id"
+          id="id"
+          placeholder="Enter Student ID..."
+          class="info"/>
         <br /><input
           type="text"
-          id="gender"
-          name="genderIn"
-          placeholder="Enter Gender..."
+          name="grade"
+          id="gradeIn"
+          placeholder="Enter Letter grade..."
           class="info"
         />
-        <br /><a href="index.html">
+        <br />
           <button type="button" onclick="createStudent()" id="saveStudent">
             Add
-          </button></a
-        >
+          </button>
+        <a href="index.html">
+          <button type="button" id="saveStudent">
+            back
+          </button>
+        </a>
       </div>
-    </form>
-
-    <div id="jsonOutput"></div>
+    </form></center>
   </body>
+
+
 </html>

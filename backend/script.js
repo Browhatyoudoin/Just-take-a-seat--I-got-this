@@ -86,7 +86,9 @@ function createStudent(){
     const first = document.getElementById('firstIn').value; 
     const last = document.getElementById('lastIn').value; 
     const grade = document.getElementById('gradeIn').value;
-    const gender = document.getElementById('gender').value; 
+    
+    
+    
 
     console.log(id);
     console.log(first);
@@ -99,7 +101,7 @@ function createStudent(){
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({id: id, first: first, last: last, grade: grade, gender: gender})
+        body: JSON.stringify({id: id, first: first, last: last, grade: grade})
     })
     .then(response => response.json())
     .catch(error => {
@@ -107,19 +109,22 @@ function createStudent(){
     })
 }
 
-function shuffleStudents(){
-
+function shuffleArray(){
+    for (let i = seating.length - 1; i > 0; i--) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [seating[i], seating[j]] = [seating[j], seating[i]]; 
+    }
+    return seating;
 }
-
-function studentsInArray(){
-
-}
-
 /*
-function createStudent(){
+function studentsArray(){
+    const arr = [];
 
+
+    for(let i = )
 }
 */
+
 function elementDrag(e) {
     e.preventDefault();
     pos1 = pos3 - e.clientX;
